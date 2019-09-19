@@ -2,7 +2,7 @@ const watch = require('watch');
 const { exec } = require('child_process');
 const colors = require('colors');
 
-const ignoreFile = f => f.includes('mock') || f.includes('test') || f.includes('lib') || f.includes('json');
+const ignoreFile = f => f.includes('.mock') || f.includes('test') || f.includes('lib') || f.includes('json');
 
 console.log('Building package...'.cyan);
 
