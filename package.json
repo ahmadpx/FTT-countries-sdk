@@ -1,0 +1,22 @@
+{
+  "name": "ftt-countries-sdk",
+  "version": "1.0.0",
+  "description": "SDK contains the business logic and application state of countries demo app",
+  "main": "index.js",
+  "scripts": {
+    "dev": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadpx/ftt-countries-sdk.git"
+  },
+  "keywords": [
+    "SDK"
+  ],
+  "author": "ahmadpx@hotmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahmadpx/ftt-countries-sdk/issues"
+  },
+  "homepage": "https://github.com/ahmadpx/ftt-countries-sdk#readme"
+}
