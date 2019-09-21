@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "node start.js",
-    "build": "babel ./src -d ./lib --ignore '**/*.test.js'"
+    "build": "babel ./src -d ./lib --ignore '**/*.test.js'",
+    "mocks:update": "node ./lib/update-mocks.js",
+    "test:watch": "npm run mocks:update && npm run build && jest --watchAll"
   },
   "repository": {
     "type": "git",
