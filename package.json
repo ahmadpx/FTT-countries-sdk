@@ -7,7 +7,10 @@
     "dev": "node start.js",
     "build": "babel ./src -d ./lib --ignore '**/*.test.js'",
     "mocks:update": "node ./lib/update-mocks.js",
-    "test:watch": "npm run mocks:update && npm run build && jest --watchAll"
+    "test:watch": "npm run mocks:update && npm run build && jest --watchAll",
+    "publish:patch": "npm run build && npm version patch && npm publish:patch",
+    "publish:minor": "npm run build && npm version minor && npm publish:minor",
+    "publish:major": "npm run build && npm version major && npm publish:major"
   },
   "repository": {
     "type": "git",
