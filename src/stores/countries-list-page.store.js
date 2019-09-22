@@ -4,7 +4,7 @@ import { filterCountries, getInitialFilterState } from '../utils/filters.utils';
 import CountriesStore from './countries.store';
 
 export default class CountriesListPageStore {
-  constructor(initialState) {
+  constructor(initialState = {}) {
     this.countriesStore = new CountriesStore(initialState.countries);
   }
 
@@ -49,12 +49,12 @@ export default class CountriesListPageStore {
   }
 
   /**
-   * reset filters group
-   * @param groupId
+   * toggleFilter
+   * @param {{groupId, value}} filter
    */
   @action.bound
-  resetFiltersGroup(groupId) {
-    this.filtersState[groupId] = [];
+  toggleFilter(filter) {
+    this.isSelectedFilter(filter) ? this.resetFilter(filter) : this.setFilter(filter);
   }
 
   /**

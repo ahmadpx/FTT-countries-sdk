@@ -1,5 +1,6 @@
 import _filter from 'lodash/filter';
 import _every from 'lodash/every';
+import _some from 'lodash/some';
 
 /**
  * initialize filters state
@@ -42,7 +43,7 @@ export function filterCountries({ countries, filtersState }) {
 export function isValidLanguage(country, languages) {
   if (!languages.length) return true;
 
-  return _every(languages.map(language => country.languages.includes(language)));
+  return _some(languages.map(language => country.languages.includes(language)));
 }
 
 /**
@@ -54,7 +55,7 @@ export function isValidLanguage(country, languages) {
 export function isValidCurrency(country, currencies) {
   if (!currencies.length) return true;
 
-  return _every(currencies.map(currency => country.currencies.includes(currency)));
+  return _some(currencies.map(currency => country.currencies.includes(currency)));
 }
 
 /**

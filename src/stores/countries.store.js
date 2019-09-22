@@ -20,7 +20,7 @@ export default class CountriesStore {
   @computed get countries() {
     return this.data.map(formatCountry);
   }
-  
+
   /**
    * filters
    * @returns {{currencies: Array, languages: Array, regions: Array}}
@@ -41,7 +41,8 @@ export default class CountriesStore {
    * fetch all countries
    * @param {Function} errorHandler
    */
-  @action fetch = flow(function*(errorHandler = () => {}) {
+  @action.bound
+  fetch = flow(function*(errorHandler = () => {}) {
     try {
       this.API_STATE = API_STATE.LOADING;
       const res = yield CountriesClient.getAllCountries();
