@@ -9,9 +9,9 @@ import _some from 'lodash/some';
  */
 export function getInitialFilterState(filterState = {}) {
   return {
-    languages: filterState['languages'] || [],
-    currencies: filterState['currencies'] || [],
-    regions: filterState['regions'] || [],
+    languages: [],
+    currencies: [],
+    regions: [],
   };
 }
 
