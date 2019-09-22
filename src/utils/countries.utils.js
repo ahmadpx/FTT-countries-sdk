@@ -11,5 +11,6 @@ export function formatCountry(country = {}) {
     population: country.population,
     currencies: country.currencies,
     languages: country.languages,
-  }
+    code: country.alpha2Code,
+  };
 }
