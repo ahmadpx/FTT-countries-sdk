@@ -1,6 +1,6 @@
 {
   "name": "ftt-countries-sdk",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "SDK contains the business logic and application state of countries demo app",
   "main": "index.js",
   "scripts": {
