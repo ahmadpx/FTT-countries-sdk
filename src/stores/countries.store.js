@@ -14,6 +14,30 @@ export default class CountriesStore {
   @observable API_STATE = API_STATE.INITIAL;
 
   /**
+   * is loading
+   * @return {boolean}
+   */
+  @computed get isLoading() {
+    return this.API_STATE === API_STATE.LOADING;
+  }
+
+  /**
+   * is fetched
+   * @return {boolean}
+   */
+  @computed get isFetched() {
+    return this.API_STATE === API_STATE.SUCCESS;
+  }
+
+  /**
+   * has error
+   * @return {boolean}
+   */
+  @computed get hasError() {
+    return this.API_STATE === API_STATE.FAILED;
+  }
+
+  /**
    * countries
    * @returns {Array<Object>}
    */
