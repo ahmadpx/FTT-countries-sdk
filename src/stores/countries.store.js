@@ -6,6 +6,10 @@ import CountriesClient from '../clients/countries.client';
 import { mapInitialStateToStoreState } from '../utils/store.utils';
 
 export default class CountriesStore {
+  /**
+   * constructor
+   * @param {Object} initialState
+   */
   constructor(initialState = {}) {
     this.updateInitialState(initialState);
   }

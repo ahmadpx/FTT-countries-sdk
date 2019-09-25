@@ -4,6 +4,10 @@ import { filterCountries, getInitialFilterState } from '../utils/filters.utils';
 import CountriesStore from './countries.store';
 
 export default class CountriesListPageStore {
+  /**
+   * constructor
+   * @param {Object} initialState
+   */
   constructor(initialState = {}) {
     this.countriesStore = new CountriesStore(initialState.countries);
   }
