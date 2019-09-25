@@ -1,5 +1,5 @@
 export const ENDPOINTS = {
-  GET_COUNTRIES: ''
+  GET_COUNTRIES: 'https://restcountries-v1.p.rapidapi.com/all'
 };
 
 export const API_STATE = {
